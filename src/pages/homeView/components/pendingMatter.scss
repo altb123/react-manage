@@ -1,0 +1,55 @@
+.pending-box {
+    width: 100%;
+    height: calc(100% - 110px);
+    margin-top: 20px;
+
+    .pend-item {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+
+        .check-box {
+            width: 25px;
+        }
+
+        .item-content {
+            width: calc(100% - 85px);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .opate-button {
+            width: 60px;
+            text-align: right;
+
+            .button-item {
+                display: inline-block;
+                padding: 0 5px;
+                cursor: pointer;
+            }
+
+            .button-item:hover {
+                color: #40A9FF;
+            }
+        }
+    }
+
+    .add-pending {
+        cursor: pointer;
+    }
+
+    .add-pending:hover {
+        color: #40A9FF;
+    }
+
+    .ant-card-body {
+        height: calc(100% - 58px);
+        overflow-y: scroll;
+    }
+
+    .ant-card-body::-webkit-scrollbar {
+        background-color: #fff;
+    }
+}

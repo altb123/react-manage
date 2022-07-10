@@ -1,0 +1,12 @@
+.nav-tab-box {
+    padding: 0;
+    background-color: transparent;
+    .ant-tabs-nav {
+        background-color: #fff;
+        margin: 0 0 10px 0;
+    }
+
+    .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+        padding: 4px 10px;
+    }
+}

@@ -1,0 +1,34 @@
+.SEARCH-BOX {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+
+    .search-row-box {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .search-row {
+        width: 100%;
+    }
+
+    .ant-form-item {
+        margin-bottom: 10px;
+    }
+
+    .ant-input {
+        width: 100%;
+    }
+
+    .search-operate {
+        display: flex;
+        width: 100%;
+        font-size: 18px;
+        justify-content: space-between;
+        // align-items: center;
+
+        .icon-text {
+            line-height: 40px;
+        }
+    }
+}

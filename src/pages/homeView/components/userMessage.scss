@@ -1,0 +1,47 @@
+.user-box {
+    .user-message {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .user-img {
+        width: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user-info {
+        width: 130px;
+        text-align: center;
+    }
+
+    .user-name {
+        font-weight: bold;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .user-role {
+        margin-top: 10px;
+        color: #999;
+        font-size: 12px;
+    }
+
+    .login-message {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #f1f1f1;
+        color: #999;
+        font-size: 12px;
+    }
+
+    .login-message-title {
+        display: inline-block;
+        width: 130px;
+    }
+
+    .login-address {
+        margin-top: 5px;
+    }
+}

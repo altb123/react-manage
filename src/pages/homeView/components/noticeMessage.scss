@@ -1,0 +1,36 @@
+.notive-box {
+    .notice-item {
+        display: flex;
+        width: 100%;
+        height: 90px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .item-icon {
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        line-height: 90px;
+        font-size: 38px;
+        color: #fff;
+    }
+
+    .item-conent {
+        width: calc(100% - 80px);
+        text-align: center;
+    }
+
+    .item-value {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .item-name {
+        font-size: 12px;
+        color: #666;
+    }
+}
