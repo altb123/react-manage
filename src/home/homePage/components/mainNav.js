@@ -1,18 +1,8 @@
-import { useState } from 'react';
 import { Tabs } from 'antd';
 import { connect } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import './mainNav.scss';
 const { TabPane } = Tabs;
-const defaultPanes = Array.from({
-    length: 1,
-}).map((_, index) => {
-    return {
-        title: `首 页`,
-        router: '/',
-        key: '',
-    };
-});
 
 const MainNav = (props) => {
     const { activeRouteTab, routeTabList } = props;

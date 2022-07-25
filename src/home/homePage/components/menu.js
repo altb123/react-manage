@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Menu, Button } from 'antd';
+import { Menu } from 'antd';
 import {
     AppstoreOutlined, ContainerOutlined, SettingOutlined,
     HomeOutlined, ExceptionOutlined, AppstoreAddOutlined,
-    AuditOutlined, MenuUnfoldOutlined, MenuFoldOutlined
+    AuditOutlined
 } from '@ant-design/icons';
 
 function getItem(
@@ -31,8 +31,8 @@ const items = [
         getItem('订单列表', 'orderList', <ContainerOutlined />, null, null, '/orderList'),
         getItem('退货管理', 'returnManage', <ExceptionOutlined />, null, null, '/returnManage'),
         getItem('生产管理', 'produceManage', <AppstoreAddOutlined />, [
-            getItem('生产列表', 'produceList', <ContainerOutlined />, null, null,),
-            getItem('审核管理', 'examineManage', <AuditOutlined />, null, null,)
+            getItem('生产列表', 'produceList', <ContainerOutlined />, null, '/produceList',),
+            getItem('审核管理', 'examineManage', <AuditOutlined />, null, '/examineManage',)
         ]),
     ]),
     getItem('Navigation Two', 'sub2', <SettingOutlined />, [
@@ -112,17 +112,6 @@ function MenuView(props) {
                 inlineCollapsed={collapsed}
                 items={items}>
             </Menu>
-
-            {/* <div style={{ height: 30, textAlign: 'right', paddingRight: 10 }}>
-                <Button
-                    type="primary"
-                    onClick={toggleCollapsed}
-                    style={{
-                        height: '100%'
-                    }}>
-                    {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-                </Button>
-            </div> */}
 
         </>
     )

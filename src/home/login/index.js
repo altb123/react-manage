@@ -12,7 +12,7 @@ const Login = (props) => {
         setSubmitLoading(true);
     };
 
-    const onFinish = (values) => {  
+    const onFinish = (values) => {
         const { username } = values;
         setTimeout(() => {
             setSubmitLoading(false);
@@ -34,55 +34,62 @@ const Login = (props) => {
     };
 
     const onFinishFailed = (errorInfo) => {
-            setSubmitLoading(false);
-            message.error(errorInfo.errorFields[0].errors[0]);
+        setSubmitLoading(false);
+        message.error(errorInfo.errorFields[0].errors[0]);
     };
 
     return (
         <>
             <div className="login-box">
-                <div className="detail">
-                    <div className="detail-title">后台管理系统</div>
+                <div class="detail-box">
+                    <div className="detail">
+                        <div className="detail-title">后台管理系统</div>
 
-                    {/* 表单内容 */}
-                    <Form
-                        name="basic"
-                        className="login-form"
-                        labelCol={{ span: 6 }}
-                        wrapperCol={{ span: 18 }}
-                        initialValues={{ remember: true }}
-                        onFinish={onFinish}
-                        onFinishFailed={onFinishFailed}
-                        autoComplete="off">
-                        <Form.Item
-                            label="Username"
-                            name="username"
-                            rules={[{ required: true, message: 'Please input your username!' }]}>
-                            <Input />
-                        </Form.Item>
+                        {/* 表单内容 */}
+                        <Form
+                            name="basic"
+                            className="login-form"
+                            labelCol={{ span: 6 }}
+                            wrapperCol={{ span: 18 }}
+                            initialValues={{ remember: true }}
+                            onFinish={onFinish}
+                            onFinishFailed={onFinishFailed}
+                            autoComplete="off">
+                            <Form.Item
+                                label="Username"
+                                name="username"
+                                rules={[{ required: true, message: 'Please input your username!' }]}>
+                                <Input />
+                            </Form.Item>
 
-                        <Form.Item
-                            label="Password"
-                            name="password"
-                            rules={[{ required: true, message: 'Please input your password!' }]}>
-                            <Input.Password />
-                        </Form.Item>
+                            <Form.Item
+                                label="Password"
+                                name="password"
+                                rules={[{ required: true, message: 'Please input your password!' }]}>
+                                <Input.Password />
+                            </Form.Item>
 
-                        <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-                            <Checkbox>Remember me</Checkbox>
-                        </Form.Item>
+                            <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+                                <Checkbox>Remember me</Checkbox>
+                            </Form.Item>
 
-                        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                            <Button
-                                type="primary"
-                                htmlType="submit"
-                                loading={submitLoading}
-                                onClick={() => handleSubmit()}>
-                                登录
-                            </Button>
-                            <p>{submitLoading}</p>
-                        </Form.Item>
-                    </Form>
+                            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                                <Button
+                                    type="primary"
+                                    htmlType="submit"
+                                    loading={submitLoading}
+                                    onClick={() => handleSubmit()}>
+                                    登录
+                                </Button>
+                                <p>{submitLoading}</p>
+                            </Form.Item>
+                        </Form>
+                    </div>
+
+                    <div class="remind-box">
+                        <div>账号：user</div>
+                        <div>密码：user</div>
+                    </div>
                 </div>
             </div>
         </>

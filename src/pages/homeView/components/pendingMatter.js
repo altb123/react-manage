@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Row, Col, Card, Checkbox, Modal, Form, Input, Select, Popconfirm } from 'antd';
+import { Card, Checkbox, Modal, Form, Input, Select, Popconfirm } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import './pendingMatter.scss';
 
